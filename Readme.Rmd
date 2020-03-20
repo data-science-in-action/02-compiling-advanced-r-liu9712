@@ -1,0 +1,30 @@
+---
+title: "Problems and Solutions"
+author: "liu9712"
+output:
+  pdf_document: default
+  html_document: default
+---
+The aim is to build the book using RStudio.
+
+First of all, I use git to clone the source of "Advanced R" to my computer, then upgrade RStudio and installed packages to the latest version.
+
+During the building process, I've met some problems. The followings are the errors and how I solved them. 
+
+## Missing packages
+Most of the problems I've encountered was the lack of package. According to tips, Use `install.packages()` to solve this kind of problems. I installed the following packages, named *bookdown* *sessioninfo* *lobstr* *testthat* *emo* *sloop* *DBI* *dbplyr* *profvis* *bench*. 
+
+## Invalid multibyte string
+In the `Introduction.Rmd`, there is an error on lines 223-235, I added `encoding = "UTF-8"` in line 224 can solve it.
+
+## A working C++ compiler
+In the `Rcpp.Rmd`, a working C++ compiler is needed. So I installed *Rtools*.
+
+## "Make" not found
+After I installed *Rtool*, I received a warning said "make" not found. I set *Rtools* to the system's environment variable to solved this problem.
+
+## "Xelatex" not Found
+When I received a warning said "xelatex" not found, I installed *MiKTeX*, update it, and change the general setings from "ask me" to "always install missing packages on-the-fly".
+
+## Fonts
+Because some of the fonts in the book have not been installed, they can not be displayed properly. So I installed two fonts on my computer, *Inconsolata* and *AndaleMono*.
